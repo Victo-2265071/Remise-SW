@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Épreuve finale - Services Web H25</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+        .container {
+            display: flex;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        .section {
+            border-right: 1px solid #ccc;
+            padding-right: 2rem;
+        }
+        .section:last-child {
+            border-right: none;
+            padding-right: 0;
+        }
+        label {
+            display: block;
+            margin-top: 1rem;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.25rem;
+        }
+        button {
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+        }
+        .resultat {
+            margin-top: 1rem;
+            font-family: monospace;
+            white-space: pre-wrap;
+            background: #f0f0f0;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Épreuve finale - Services Web H25</h1>
+    <p><strong>Nom de l'élève :</strong> William Champagne</p>
+
+    <div class="container">
+        <div class="section">
+            <h2>Création d’un utilisateur</h2>
+            <label>Prénom
+                <input type="text" id="prenom">
+            </label>
+            <label>Nom
+                <input type="text" id="nom">
+            </label>
+            <label>Courriel
+                <input type="email" id="courriel-creer">
+            </label>
+            <label>Mot de passe
+                <input type="password" id="motdepasse-creer">
+            </label>
+            <button onclick="creerUtilisateur()">Créer</button>
+            <div class="resultat" id="resultat-creer"></div>
+        </div>
+
+        <div class="section">
+            <h2>Récupération d’une clé api</h2>
+            <label>Courriel
+                <input type="email" id="courriel-cle">
+            </label>
+            <label>Mot de passe
+                <input type="password" id="motdepasse-cle">
+            </label>
+            <label>
+                <input type="checkbox" id="regenerer"> Générer une nouvelle clé
+            </label>
+            <button onclick="recupererCle()">Récupérer</button>
+            <div class="resultat" id="resultat-cle"></div>
+        </div>
+    </div>
+
+    <script>
+        async function creerUtilisateur() {
+            const data = {
+                nom: document.getElementById('nom').value,
+                prenom: document.getElementById('prenom').value,
+                courriel: document.getElementById('courriel-creer').value,
+                motdepasse: document.getElementById('motdepasse-creer').value
+            };
+
+            try {
+                const response = await fetch('https://projetfinsession.onrender.com/api/taches/ajouterutilisateur', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const resultat = await response.json();
+                document.getElementById('resultat-creer').textContent = resultat.message ?? "Aucun message retourné.";
+            } catch (err) {
+                document.getElementById('resultat-creer').textContent = 'Erreur : ' + err;
+            }
+        }
+
+        async function recupererCle() {
+    const data = {
+        courriel: document.getElementById('courriel-cle').value,
+        motdepasse: document.getElementById('motdepasse-cle').value
+    };
+    if (document.getElementById('regenerer').checked) {
+        data.regenerer = true;
+    }
+
+    try {
+        const response = await fetch('https://projetfinsession.onrender.com/api/taches/demandercle', {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        const resultat = await response.json();
+        
+        let message = '';
+        
+        if (resultat.message) {
+            message += `Message : ${resultat.message}\n`;
+        }
+        
+        if (resultat.cle_api) {
+            message += `Clé API : ${resultat.cle_api}`;
+        }
+
+        // Affichage du message
+        document.getElementById('resultat-cle').textContent = message;
+    } catch (err) {
+        document.getElementById('resultat-cle').textContent = 'Erreur : ' + err;
+    }
+}
+    </script>
+</body>
+</html>
