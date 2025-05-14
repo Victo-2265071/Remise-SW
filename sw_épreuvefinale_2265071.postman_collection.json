@@ -1,0 +1,1186 @@
+{
+	"info": {
+		"_postman_id": "1f2b27d3-5502-4923-a20d-2dbac205f366",
+		"name": "sw_épreuvefinale_2265071",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41198037"
+	},
+	"item": [
+		{
+			"name": "LOCAL",
+			"item": [
+				{
+					"name": "SousTâches",
+					"item": [
+						{
+							"name": "AjouterSousTache",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "cle_api 9926f623da98d3e8a5fb1502a30859",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titre\": \"Créé sur Postman\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:3000/api/taches/ajoutersoustache",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"taches",
+										"ajoutersoustache"
+									],
+									"query": [
+										{
+											"key": null,
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ModifierSousTache",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "cle_api 9e3d0e910b0796b5cbf3d11172c9da",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titre\": \"Modifiée sur Postman\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:3000/api/taches/modifiersoustache/5",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"taches",
+										"modifiersoustache",
+										"5"
+									],
+									"query": [
+										{
+											"key": null,
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ModifierStatutSousTache",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "cle_api 9e3d0e910b0796b5cbf3d11172c9da",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"complete\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:3000/api/taches/modifierstatutsoustache/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"taches",
+										"modifierstatutsoustache",
+										"1"
+									],
+									"query": [
+										{
+											"key": null,
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SupprimerSousTache",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "cle_api 9e3d0e910b0796b5cbf3d11172c9da",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:3000/api/taches/supprimersoustache/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"taches",
+										"supprimersoustache",
+										"2"
+									],
+									"query": [
+										{
+											"key": null,
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Tâches",
+					"item": [
+						{
+							"name": "AfficherTaches",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "cle_api 9926f623da98d3e8a5fb1502a30859",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:3000/api/taches/affichertaches",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"taches",
+										"affichertaches"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AfficherTaches (Toutes)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "cle_api 9e3d0e910b0796b5cbf3d11172c9da",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:3000/api/taches/affichertaches?toutes=true",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"taches",
+										"affichertaches"
+									],
+									"query": [
+										{
+											"key": "toutes",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AfficherDetail",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "cle_api 9e3d0e910b0796b5cbf3d11172c9da",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:3000/api/taches/afficherdetail",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"taches",
+										"afficherdetail"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AjouterTache",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "cle_api 9926f623da98d3e8a5fb1502a30859",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titre\": \"Créé sur Postman\",\r\n    \"description\": \"Cette tâche a été créée sur Postman\",\r\n    \"dateEcheance\": \"2025-05-15\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:3000/api/taches/ajoutertache",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"taches",
+										"ajoutertache"
+									],
+									"query": [
+										{
+											"key": null,
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ModifierTache",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "cle_api 9e3d0e910b0796b5cbf3d11172c9da",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titre\": \"Modifiée sur Postman\",\r\n    \"description\": \"Cette tâche a été modifiée sur Postman\",\r\n    \"dateEcheance\": \"2025-05-20\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:3000/api/taches/modifiertache/5",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"taches",
+										"modifiertache",
+										"5"
+									],
+									"query": [
+										{
+											"key": null,
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ModifierStatutTache",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "cle_api 9e3d0e910b0796b5cbf3d11172c9da",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"complete\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:3000/api/taches/modifierstatuttache/5",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"taches",
+										"modifierstatuttache",
+										"5"
+									],
+									"query": [
+										{
+											"key": null,
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SupprimerStatutTache",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "cle_api 9e3d0e910b0796b5cbf3d11172c9da",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:3000/api/taches/supprimertache/5",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"taches",
+										"supprimertache",
+										"5"
+									],
+									"query": [
+										{
+											"key": null,
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Utililsateurs",
+					"item": [
+						{
+							"name": "CreerUtilisateur",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "cle_api 57e25437be7d9172a8e92099418d06",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nom\":\"Champagne\",\r\n    \"prenom\":\"William\",\r\n    \"courriel\":\"william_champagne@hotmail.com\",\r\n    \"motdepasse\": \"qwerty123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:3000/api/taches/ajouterutilisateur",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"taches",
+										"ajouterutilisateur"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DemanderCle",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"courriel\":\"william_champagne@hotmail.com\",\r\n    \"motdepasse\": \"qwerty123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:3000/api/taches/demandercle",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"taches",
+										"demandercle"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DemanderCle (Nouvelle)",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"courriel\":\"william_champagne@hotmail.com\",\r\n    \"motdepasse\": \"qwerty123\",\r\n    \"regenerer\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:3000/api/taches/demandercle",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"taches",
+										"demandercle"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "RENDER",
+			"item": [
+				{
+					"name": "SousTâches",
+					"item": [
+						{
+							"name": "AjouterSousTache",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "cle_api 77420c12d82410e762e680de641754",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titre\": \"Créé sur Postman\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://projetfinsession.onrender.com/api/taches/ajoutersoustache/8",
+									"protocol": "https",
+									"host": [
+										"projetfinsession",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"taches",
+										"ajoutersoustache",
+										"8"
+									],
+									"query": [
+										{
+											"key": null,
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ModifierSousTache",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "cle_api 77420c12d82410e762e680de641754",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titre\": \"Modifiée sur Postman\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://projetfinsession.onrender.com/api/taches/modifiersoustache/8",
+									"protocol": "https",
+									"host": [
+										"projetfinsession",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"taches",
+										"modifiersoustache",
+										"8"
+									],
+									"query": [
+										{
+											"key": null,
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ModifierStatutSousTache",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "cle_api 77420c12d82410e762e680de641754",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"complete\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://projetfinsession.onrender.com/api/taches/modifierstatutsoustache/1",
+									"protocol": "https",
+									"host": [
+										"projetfinsession",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"taches",
+										"modifierstatutsoustache",
+										"1"
+									],
+									"query": [
+										{
+											"key": null,
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SupprimerSousTache",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "cle_api 1a89800ce7f97904a61f2212",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://projetfinsession.onrender.com/api/taches/supprimersoustache/2",
+									"protocol": "https",
+									"host": [
+										"projetfinsession",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"taches",
+										"supprimersoustache",
+										"2"
+									],
+									"query": [
+										{
+											"key": null,
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Tâches",
+					"item": [
+						{
+							"name": "AfficherTaches",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "cle_api 77420c12d82410e762e680de641754",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://projetfinsession.onrender.com/api/taches/affichertaches",
+									"protocol": "https",
+									"host": [
+										"projetfinsession",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"taches",
+										"affichertaches"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AfficherTaches (Toutes)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "cle_api 1a89800ce7f97904a61f2212",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://projetfinsession.onrender.com/api/taches/affichertaches?toutes=true",
+									"protocol": "https",
+									"host": [
+										"projetfinsession",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"taches",
+										"affichertaches"
+									],
+									"query": [
+										{
+											"key": "toutes",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AfficherDetail",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "cle_api 77420c12d82410e762e680de641754",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://projetfinsession.onrender.com/api/taches/afficherdetail/7",
+									"protocol": "https",
+									"host": [
+										"projetfinsession",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"taches",
+										"afficherdetail",
+										"7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AjouterTache",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "cle_api 77420c12d82410e762e680de641754",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titre\": \"Créé sur Postman\",\r\n    \"description\": \"Cette tâche a été créée sur Postman\",\r\n    \"dateEcheance\": \"2025-05-15\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://projetfinsession.onrender.com/api/taches/ajoutertache",
+									"protocol": "https",
+									"host": [
+										"projetfinsession",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"taches",
+										"ajoutertache"
+									],
+									"query": [
+										{
+											"key": null,
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ModifierTache",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "cle_api 77420c12d82410e762e680de641754",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titre\": \"Modifiée sur Postman\",\r\n    \"description\": \"Cette tâche a été modifiée sur Postman\",\r\n    \"dateEcheance\": \"2025-05-20\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://projetfinsession.onrender.com/api/taches/modifiertache/7",
+									"protocol": "https",
+									"host": [
+										"projetfinsession",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"taches",
+										"modifiertache",
+										"7"
+									],
+									"query": [
+										{
+											"key": null,
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ModifierStatutTache",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "cle_api 77420c12d82410e762e680de641754",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"complete\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://projetfinsession.onrender.com/api/taches/modifierstatuttache/7",
+									"protocol": "https",
+									"host": [
+										"projetfinsession",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"taches",
+										"modifierstatuttache",
+										"7"
+									],
+									"query": [
+										{
+											"key": null,
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SupprimerTache",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "cle_api 77420c12d82410e762e680de641754",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://projetfinsession.onrender.com/api/taches/supprimertache/7",
+									"protocol": "https",
+									"host": [
+										"projetfinsession",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"taches",
+										"supprimertache",
+										"7"
+									],
+									"query": [
+										{
+											"key": null,
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Utililsateurs",
+					"item": [
+						{
+							"name": "CreerUtilisateur",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nom\":\"Utilisateur\",\r\n    \"prenom\":\"Test\",\r\n    \"courriel\":\"Courriel3@test.com\",\r\n    \"motdepasse\": \"qwerty123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://projetfinsession.onrender.com/api/taches/ajouterutilisateur",
+									"protocol": "https",
+									"host": [
+										"projetfinsession",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"taches",
+										"ajouterutilisateur"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DemanderCle",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"courriel\":\"william_champagne@hotmail.com\",\r\n    \"motdepasse\": \"qwerty123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://projetfinsession.onrender.com/api/taches/demandercle",
+									"protocol": "https",
+									"host": [
+										"projetfinsession",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"taches",
+										"demandercle"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DemanderCle (Nouvelle)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"courriel\":\"Courriel@test.com\",\r\n    \"motdepasse\": \"qwerty123\",\r\n    \"regenerer\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://projetfinsession.onrender.com/api/taches/demandercle",
+									"protocol": "https",
+									"host": [
+										"projetfinsession",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"taches",
+										"demandercle"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
